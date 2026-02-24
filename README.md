@@ -29,3 +29,27 @@ Note: Uses CSS selectors (#id, .class, div > p, etc.). NodeList is static (does 
 
 2 no ans:
 You create a new element using document.createElement(), set its content or attributes if needed, and insert it into the DOM using methods like appendChild() or insertBefore().
+
+3 no ans:
+Event Bubbling is a type of event propagation in the DOM where an event triggered on a child element bubbles up to its parent elements, all the way to the document root, unless it is stopped.
+
+How it works:
+
+When an event (like click) occurs on an element, it first runs on that element (the target).
+
+Then the same event automatically triggers on its parent, then the parent’s parent, and so on, moving up the DOM tree.
+
+You can stop it from bubbling using event.stopPropagation().
+
+ Event starts at the innermost element and moves upward through its ancestors.
+
+ 4 no ans:
+ Event Delegation in JavaScript is a technique where you attach a single event listener to a parent element instead of multiple listeners on individual child elements, and then handle events on the children using the event’s target property.
+
+Why it is useful:
+
+Reduces memory usage by minimizing the number of event listeners.
+
+Automatically works for dynamically added elements.
+
+Makes code cleaner and easier to maintain.
