@@ -16,7 +16,7 @@
 
   const cards = document.querySelectorAll(".job-card");
 
-  // Initialize All tab
+ 
   allTabBtn.classList.add("bg-blue-500", "text-white");
   jobsCountSpan.innerText = cards.length + " jobs";
 
@@ -25,7 +25,7 @@
     const rejectedBtn = card.querySelector(".rejected-btn");
     const status = card.querySelector(".status");
 
-    let statusFlag = "none"; // none / interview / rejected
+    let statusFlag = "none";
 
     interviewBtn.addEventListener("click", () => {
       if (statusFlag !== "interview") {
@@ -58,7 +58,7 @@
 
   });
 
-  // Tab click events
+
   allTabBtn.addEventListener("click", () => showTab("all"));
   interviewTabBtn.addEventListener("click", () => showTab("interview"));
   rejectedTabBtn.addEventListener("click", () => showTab("rejected"));
@@ -96,21 +96,21 @@
  const tabButtons = [allTabBtn, interviewTabBtn, rejectedTabBtn];
 
   function activateTab(tabBtn) {
-    // সব button gray background, black text
+   
     tabButtons.forEach(btn => {
       btn.classList.remove("bg-blue-500", "text-white");
       btn.classList.add("bg-gray-200", "text-black");
     });
 
-    // clicked button blue background, white text
+   
     tabBtn.classList.add("bg-blue-500", "text-white");
     tabBtn.classList.remove("bg-gray-200", "text-black");
   }
 
-  // Initial active tab = All
+ 
   activateTab(allTabBtn);
 
-  // Click events
+
   allTabBtn.addEventListener("click", () => activateTab(allTabBtn));
   interviewTabBtn.addEventListener("click", () => activateTab(interviewTabBtn));
   rejectedTabBtn.addEventListener("click", () => activateTab(rejectedTabBtn));
