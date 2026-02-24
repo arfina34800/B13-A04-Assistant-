@@ -82,9 +82,9 @@
       b.classList.remove("bg-blue-500","text-white");
       b.classList.add("bg-gray-200","text-black");
     });
-    if(tab==="all") allTabBtn.classList.add("bg-blue-500","text-white");
-    if(tab==="interview") interviewTabBtn.classList.add("bg-blue-500","text-white");
-    if(tab==="rejected") rejectedTabBtn.classList.add("bg-blue-500","text-white");
+    if(tab==="all") allTabBtn.classList.add("bg-blue-500",);
+    if(tab==="interview") interviewTabBtn.classList.add("bg-blue-500",);
+    if(tab==="rejected") rejectedTabBtn.classList.add("bg-blue-500",);
   }
 
   function updateTab(){
@@ -92,4 +92,26 @@
     showTab(activeTab);
   }
 
+
+ const tabButtons = [allTabBtn, interviewTabBtn, rejectedTabBtn];
+
+  function activateTab(tabBtn) {
+    // সব button gray background, black text
+    tabButtons.forEach(btn => {
+      btn.classList.remove("bg-blue-500", "text-white");
+      btn.classList.add("bg-gray-200", "text-black");
+    });
+
+    // clicked button blue background, white text
+    tabBtn.classList.add("bg-blue-500", "text-white");
+    tabBtn.classList.remove("bg-gray-200", "text-black");
+  }
+
+  // Initial active tab = All
+  activateTab(allTabBtn);
+
+  // Click events
+  allTabBtn.addEventListener("click", () => activateTab(allTabBtn));
+  interviewTabBtn.addEventListener("click", () => activateTab(interviewTabBtn));
+  rejectedTabBtn.addEventListener("click", () => activateTab(rejectedTabBtn));
 });
