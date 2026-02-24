@@ -53,3 +53,12 @@ Reduces memory usage by minimizing the number of event listeners.
 Automatically works for dynamically added elements.
 
 Makes code cleaner and easier to maintain.
+
+
+5 no ans:
+Difference between preventDefault() and stopPropagation() in JavaScript:
+
+preventDefault() → Stops the browser’s default action for an event (e.g., prevents a link from navigating, a form from submitting).
+
+stopPropagation() → Stops the event from bubbling or capturing further in the DOM tree, preventing parent elements from receiving the event.
+
